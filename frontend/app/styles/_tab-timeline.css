@@ -1,0 +1,72 @@
+.tab-timeline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 4rem 0;
+  padding:0 3rem;
+}
+
+.tab-timeline-buttons-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width:80%;
+}
+
+.dashes {
+  position: absolute;  
+  top: 0;              
+  left: 50%;          
+  transform: translateX(-50%);
+  width: 75%;    
+  border-top: 2px dashed black;
+  margin-bottom: -2rem;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.tab-timeline-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: -0.65rem;
+  width: 25%;
+}
+
+.tab-timeline-button {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  border: 2px solid black;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.tab-timeline-button-label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tab-timeline-button-label.active-label{
+  font-size: 16px;
+  color: #af272f;
+}
+
+.tab-timeline-button.active {
+  background: #af272f;
+  color: #af272f;
+  border: 2px solid #af272f;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.tab-timeline-content {
+  width:100%
+}

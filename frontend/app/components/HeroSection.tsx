@@ -34,7 +34,7 @@ export function HeroSection({ data }: Readonly<HeroSectionProps>){
                 alt="Background"
                 height={500}
                 width={900}
-                src={image.url}
+                url={image.url}
             />
             <Link href={link.url}>{link.text}</Link>
         </div>

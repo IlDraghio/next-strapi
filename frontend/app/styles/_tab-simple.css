@@ -1,0 +1,113 @@
+.tabs {
+  display: flex;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: border-bottom-width 0.2s, color 0.2s;
+  border-radius: 2px 2px 0 0;
+}
+
+.tab:not(.active):hover {
+  background-color: grey;
+}
+
+.tab.active {
+  border: 2px solid grey;
+  border-bottom: none;
+  background: white;
+  position: relative;
+  z-index: 3;
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; 
+  left: 0;
+  right: 0;
+  height: 4px; 
+  background: white;
+  z-index: 4;
+}
+
+.tab-label {
+  font-size: 14px;
+  display: block;
+}
+
+.tab.active .tab-label {
+  color: #af272f;   
+  font-size: 16px;
+  font-weight: 400; 
+} 
+
+.tab-content {
+  border: 2px solid grey;
+  padding: 1rem;
+  border-radius: 0 0 2px 2px;
+  z-index: 1;
+}
+
+
+.tab-simple-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 4rem 0;
+  padding:0 3rem;
+}
+
+.tab-simple-buttons-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width:80%;
+}
+
+.tab-simple-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: -0.65rem;
+  width: 25%;
+}
+
+.tab-simple-button {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  border: 2px solid black;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.tab-simple-button-label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tab-simple-button-label.active-label{
+  font-size: 16px;
+  color: #af272f;
+}
+
+.tab-simple-button.active {
+  background: #af272f;
+  color: #af272f;
+  border: 2px solid #af272f;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.tab-simple-content {
+  width:100%
+}
